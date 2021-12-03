@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <!-- Permite al navegador reconocer carácteres especiales de escritura
+        como acentos y simbolos de exclamación -->
+        <meta charset="UTF-8" />
+        <!--le dice a la pagina que ajuste el texto a la resolucion de pantalla
+        user-escalable=0 impide que se pueda hacer zoom-->
+        <meta name="viewport" content="width=device-width user-scalable=0"/> 
+        <link rel="stylesheet" href="juego.css"/> <!-- Llamado al estilo de marco. -->
+                                                <!-- los estilos se configuran con CSS -->
+    </head>
+    <body>
+        <div id="titulo">Culebrita.JS por JLB</div>
+        <div id="bannerRotarTelefono" class="esconder">
+            <div>Usa tu teléfono en modo vertical para jugar</div>
+            <button id="botonCerrarBanner">OK</button>
+        </div>
+        <!-- el identficador id hace que ese estilo de canvas -->
+        <!-- se muestre solo para ese elemento -->
+        <!-- en este caso el marco del juego-->
+        <div id="contenedorJuego">
+            <div id="contenedorNintendo">
+                <div id="puntos">PUNTOS: = 0</div>
+                <div id="canvasInsertado">
+                    <img id="nintendo" src="nintendo.png"/>
+                    <canvas id="juegoCanvas" width="600" height="600"></canvas>
+                </div>
+            </div>
+        </div>
+        <script src="culebrita.js"></script> <!-- Llamado al JS-->
+     </body>
+</html>
+
+

@@ -1,0 +1,174 @@
+body {
+    background-color: royalblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    height: 100%;
+    overflow: hidden; /** impide que la pagina se mueva **/
+    font-size: 40px;
+}
+
+/** para llamar un id se escribe # y el id **/
+#titulo {
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; /** espacio entre el titulo y el puntaje **/  
+}
+
+/** los nombres de clases empiezan con . **/
+.esconder {
+    display: none !important;
+
+}
+
+#bannerRotarTelefono {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: coral;
+    color: white;
+    padding: 10px; /** agrega en espacio entre el fondo y el texto como marco **/
+    margin-bottom: 5px;
+}
+
+#botonCerrarBanner {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 5px;
+    background-color: coral;
+    color: white;
+    padding: 6px;
+}
+
+#puntos {
+    color: greenyellow;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+#contenedorJuego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedorNintendo {
+    width: 91%;
+    display: flex;
+    flex-direction: column;
+}
+
+#canvasInsertado {
+    position: relative;
+}
+
+#juegoCanvas {
+    position:absolute;
+    left: 16.9%;
+    top: 5.19%;
+    width: 73.8%;
+    background-color: #0eed2c;
+}
+
+#nintendo {
+    width: 100%;
+}
+
+/** Propieda para que al pasar a una resolucion ancha de pantalla,
+segun la condición que le damos, ajuste el ancho del contenedor
+para que se vea bien en esa resolución. Es decir, condiciona todas las 
+propiedades que yo coloque, para aplicar a cierta resolución.
+
+Todos estos condicionales (Queries) solo funcionan si esta aplicada la condición
+viewport en el archivo HTML**/
+@media screen and (min-width: 768px) {
+    #contenedorNintendo {
+        width: 50%;
+    } 
+    body {
+        font-size: 60px;
+    }   
+}
+
+@media screen and (min-width: 1024px) {
+    #contenedorNintendo {
+        width: 50%;
+    } 
+    body {
+        font-size: 70px;
+    }   
+}
+
+@media screen and (min-width: 1280px) {
+    #contenedorNintendo {
+        width: 40%;
+    } 
+    body {
+        font-size: 80px;
+    }   
+}
+
+.shake-horizontal {
+	-webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+ @-webkit-keyframes shake-horizontal {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+              transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+              transform: translateX(-8px);
+    }
+  }
+  @keyframes shake-horizontal {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+              transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+              transform: translateX(-8px);
+    }
+  }
+  
